@@ -1,0 +1,499 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;/*http://es.learnlayout.com/box-sizing.html*/
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+header{
+	background: rgba(0,0,0,.2);
+	width: 100%;
+	position: fixed;
+	height: 40px;
+	z-index: 4;
+	color: #fff;
+	text-align: center;
+	border-bottom-color: rgba(255,255,255,.3); 
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+}
+
+header nav{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: left;
+}
+header nav #menuIcon{
+	position: relative;
+	height: 100%;
+	width: 10%;
+}
+header nav #menuIcon span{
+	position: relative;
+	height: 100%;
+	font-size: 1.5em;
+	margin: 0 5px;
+	top:7px;
+}
+header nav #menuCard{
+	display: none;
+	background: rgba(0,0,0,.9);
+	position: relative;
+	width: 100%;	
+}
+header nav #menuCard #prueba{
+	position: relative;
+	height: 100%;
+}
+header nav #menuCard #prueba .mainMenu{
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0px 5px;
+	padding: 8px 0;
+	cursor: pointer; 
+}
+header nav #menuCard #prueba .secondMenu{
+	display: none;
+	position: relative;
+	margin: 5px 20px;
+}
+header .menulinks{
+	text-decoration: none;
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+	position: relative;
+}
+header .menulinks:hover{
+	font-weight: bold;
+}
+header nav div ul li:hover{
+	background: rgba(204,204,204,.2);
+}
+
+#showMenu{
+	display: none;
+}
+
+ul,ol{
+	list-style: none;
+}
+body{
+	position: relative;
+	font-family: arial;
+	background: rgb(51,51,51);
+}
+.slideshow{
+	position: relative;
+	width: 100%;
+}
+.slider li, ul{
+	width: 100%;
+}
+.slider li{
+	overflow: hidden;
+}
+.slider li img{
+	width: 767px;
+}
+.slider .caption{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -3px;
+	left: 0;
+	color: #fff;
+	padding: 15px 50px; /*para evitar problemas*/
+	background: rgba(0,0,0,.3);
+	display: flex;/*hace que funcionen las 3 sentencias siguientes*/
+	flex-direction: column;/*para quen los elementos se pongan uno debajo del otro*/
+	justify-content: center; /*para centrar horizontalmente*/
+	align-items: center; /*para centrar verticalmente*/
+	text-align: center;
+
+	z-index: 1;
+}
+/*
+.slider .caption:hover{
+	background: rgba(0,0,0,.5);
+	top: -3px;
+	transition-duration:.7s;
+}*/
+.slider .caption h2{
+	font-size: 20px;
+}
+.slider .caption p{
+	display: none;
+	margin-top: 10px;
+	font-size: 10px;
+}
+.pagination{
+	
+	position: absolute;
+	bottom: .6%; /*para que se posicione debajo de su padre osea todo el slider*/
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 3;
+}
+.pagination li{
+	font-size: 12px;
+	margin: 2px 5px;
+	color: #fff;
+	/*cursor: pointer;*/
+}
+.arrowleft, .arrowright{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 1em;
+	z-index: 3;
+}
+.arrowleft{
+	left: 10px;
+}
+.arrowright{
+	right: 10px;
+}
+.arrowleft span, .arrowright span{
+	cursor: pointer;
+}
+
+/* PRUEBAS */
+
+.secciones{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.secciones ul{
+	width: 100%;
+}
+.nada{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 90%;
+	margin:10px 5%;
+	border-radius: 5%;
+	border: 1.5px solid rgba(255,255,255,.5);
+}
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 89%;
+	transition-duration:1s;
+}
+.content:hover{
+	top:0%;
+	transition-duration:1s;
+}
+.content:after{
+	font-family: 'icomoon';
+	content: "\ea3a";
+	position: absolute;
+	top:5px;
+	right: 10px;
+	color: white;
+	height: 100%;
+}
+.content:hover:after{
+	font-family: 'icomoon';
+	content: "\ea3e";
+	position: absolute;
+	top:5px;
+	right: 10px;
+	color: white;
+	height: 100%;
+}
+.imgcontent{
+	width: 100%;
+	background: black;
+}
+.imgcontent img{
+	width: 100%;
+}
+.secciones .nada .content h2{
+	padding-left: 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+.secciones .nada .content p{
+	display: block;
+	padding: 15px 10px;
+	color: #fff; 
+}
+footer{
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background: rgba(0,0,0,.8);
+	margin-top: 50px;
+	text-align: center;
+}
+footer .networks{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	top: 30px;
+}
+footer .networks a{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position:relative;
+} 
+footer .networks a:before{
+	color:white;
+	text-decoration: none;
+	position:absolute;
+	font-size: 2em;
+	top: 3px;
+	left: 5px;
+	font-family: 'icomoon';
+}
+footer .networks a:nth-child(1):before{
+	content: "\ea96";
+}
+footer .networks a:nth-child(2):before{
+	content: "\ea90";
+}
+footer .networks a:nth-child(3):before{
+	content: "\ea8a";
+}
+footer .networks a:nth-child(4):before{
+	content: "\ea9f";
+}
+footer p{
+	position: relative;
+	color: white;
+	top: 50px;
+}
+
+@media screen and (min-width: 600px){
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 92%;
+	transition-duration:1s;
+}
+}
+
+/*================================ TABLETS =======================================*/
+
+@media screen and (min-width: 767px){
+
+header{
+	background: rgba(0,0,0,.2);
+}
+header nav{
+	position: absolute;
+	width: 100%;
+	right: 0;
+	height: 100%;
+	margin-right: 0px;
+	display: inline-block;
+
+}
+header nav #menuIcon{
+	display: none;
+}
+header nav #menuCard{
+	display: block;
+	height: 100%;
+	background: rgba(0,0,0,.2);
+}
+header nav #menuCard #prueba{
+	position: relative;	
+	padding: 0;
+	margin: 0px;
+	margin-left: 50%;
+	left: -310px;
+	width: 620px;
+}	
+header nav #menuCard #prueba .mainMenu{
+	display: inline-block;
+	height: 100%;
+	width: 150px;
+	margin: 0;
+	padding: 9px 0px;
+	text-align: center;
+}
+header nav #menuCard #prueba .secondMenu{
+	display: none;
+}
+ #showMenu{
+	display: none;		
+	position: absolute;
+	width: 150px;
+	top:40px;
+	border-left: 1px dashed rgba(255,255,255,.3);
+	border-right: 1px dashed rgba(255,255,255,.3);
+	border-bottom: 1px dashed rgba(255,255,255,.3);
+	background: rgba(0,0,0,.6);
+}
+#showMenu ul{
+	height: 100%;
+	width: 100%
+}
+
+#showMenu ul .sports{
+	display: block;
+	margin: 10px 0px;
+}
+#showMenu ul .sports a{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+}
+#showMenu ul .sports a:hover{
+	font-weight: bold;
+	cursor: 
+}
+/*                   */
+
+.slider li img{
+	width: 950px;
+}
+.slider .caption h2{
+	font-size: 35px;
+}
+.slider .caption p{
+	display: block;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.arrowleft{
+	left: 10px;
+}
+.arrowright{
+	right: 10px;
+}
+.arrowleft, .arrowright{
+	font-size: 1.5em;
+}
+
+/* PRUEBAS */
+.secciones{
+	margin-bottom: 0px;
+}
+.nada{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 48%;
+	margin:10px .8%;
+}
+.content{
+	top: 90%;
+}
+.secciones .nada .content h2{
+	padding-left: 10px;
+	color: #fff;
+	font-weight: bold;
+}
+.secciones .nada .content p{
+	padding: 15px 10px;
+	color: #fff; 
+}
+
+.prueba1{
+	background: green;
+	width: 100%;
+	height: 150px;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	background: rgba(0,0,0,.8);;
+	height: 150px;
+	margin-top: 20px;
+	
+}
+
+}
+
+/* ======================== DESKTOP ================================================ */
+
+
+@media screen and (min-width: 950px){
+	
+header{
+	font-family: arial;
+}
+#menuCard  #prueba .mainMenu a{
+	font-size: 20px;
+}
+.slider li img{
+	width: 100%;
+}
+.slider .caption h2{
+	font-size: 50px;
+}
+.slider .caption p{
+	margin-top: 10px;
+	font-size: 20px;
+}
+.arrowleft{
+	left: 10px;
+}
+.arrowright{
+	right: 10px;
+}
+.arrowleft, .arrowright{
+	font-size: 2em;
+}
+
+/* PRUEBAS */
+.secciones{
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+.nada{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 24%;
+	margin:0 .3%;
+}
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 85%;
+	transition-duration:1s;
+}
+.secciones .nada .content h2{
+	padding-left: 10px;
+	color: #fff;
+	font-weight: bold;
+	padding-right: 60px;/*para que el titulo no choque con el icono flecha up*/
+}
+.secciones .nada .content p{
+	padding: 15px 10px;
+	color: #fff; 
+}
+footer{
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background: rgba(0,0,0,.8);
+	margin-top: 40px;
+	}
+
+}
